@@ -42,14 +42,14 @@ errordict /typecheck {
 null .pdf_hook_DSC_Creator clear
 errordict /typecheck currentdict /&typecheck get put
 [
-  /&typecheck 
+  /&typecheck
   /typecheckcount
   /.pdf_hook_DSC_Creator
 ] { currentdict exch undef } forall
 (A candidate for .forceput operator found!) success
 
 (Attempting sanity check with the candidate for .forceput operator...) info
-<< /overwritten false >> readonly 
+<< /overwritten false >> readonly
 begin
   currentdict /overwritten true .forceput
   overwritten not {
@@ -69,7 +69,7 @@ userparams /PermitFileWriting [(*)] .forceput
 userparams /PermitFileReading [(*)] .forceput
 save restore
 
-SAFER { 
+SAFER {
   (Could not escape from Safer Mode.) fail
 } bind executeonly if
 (Successfully escaped from Safer Mode!) success
