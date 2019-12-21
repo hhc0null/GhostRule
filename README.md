@@ -11,5 +11,8 @@ All exploits allow an attacker to achieve OS command execution and file I/O howe
 ### "Rule #1": Safer Mode Bypass by `.forceput` Exposure via `.pdf_hook_DSC_Creator` (CVE-2019-14811)
 [GhostRule \#1](./ghostrule1.ps) was assigned [CVE-2019-14811](https://access.redhat.com/security/cve/cve-2019-14811).
 
+### "Rule #2": Safer Mode Bypass by `.forceput` Exposure via `setuserparams` (CVE-2019-14812)
+[GhostRule \#2](./ghostrule2.ps) was assigned [CVE-2019-14812](https://access.redhat.com/security/cve/cve-2019-14812).
+
 ### "Rule #4": Safer Mode Bypass by `.forceput` Exposure via `.buildfont1` (CVE-2019-10216)
 [GhostRule \#4](./ghostrule4.ps) was assigned [CVE-2019-10216](https://access.redhat.com/security/cve/cve-2019-10216). ~~The credit was stolen...~~ :crying_cat_face:
