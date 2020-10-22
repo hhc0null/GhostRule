@@ -1,6 +1,6 @@
 FROM alpine:3.12 AS build
 
-ARG gs_version=9.27
+ARG gs_version
 
 RUN apk add --update-cache \
         build-base \
@@ -17,7 +17,7 @@ RUN apk add --update-cache \
 
 FROM alpine:3.12
 
-ARG gs_version=9.27
+ARG gs_version
 
 COPY --from=build "/usr/local/ghostscript-${gs_version}" "/usr/local/ghostscript-${gs_version}"
 ENV PATH="/usr/local/ghostscript-${gs_version}/bin:${PATH}"
