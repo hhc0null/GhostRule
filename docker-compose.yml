@@ -8,7 +8,7 @@ services:
         gs_version: 9.27
     volumes:
       - "./ghostrule1.ps:/poc.ps:ro"
-    command: [ "gs", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
+    command: [ "gs", "-q", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
 
   ghostrule2:
     build:
@@ -17,7 +17,7 @@ services:
         gs_version: 9.27
     volumes:
       - "./ghostrule2.ps:/poc.ps:ro"
-    command: [ "gs", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
+    command: [ "gs", "-q", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
 
   ghostrule3:
     build:
@@ -26,7 +26,7 @@ services:
         gs_version: 9.27
     volumes:
       - "./ghostrule3.ps:/poc.ps:ro"
-    command: [ "gs", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
+    command: [ "gs", "-q", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
 
   ghostrule4:
     build:
@@ -35,7 +35,7 @@ services:
         gs_version: 9.27
     volumes:
       - "./ghostrule4.ps:/poc.ps:ro"
-    command: [ "gs", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
+    command: [ "gs", "-q", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
 
   ghostrule6:
     build:
@@ -44,4 +44,4 @@ services:
         gs_version: 9.26
     volumes:
       - "./ghostrule6.ps:/poc.ps:ro"
-    command: [ "gs", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
+    command: [ "gs", "-q", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
