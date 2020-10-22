@@ -36,3 +36,12 @@ services:
     volumes:
       - "./ghostrule4.ps:/poc.ps:ro"
     command: [ "gs", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
+
+  ghostrule6:
+    build:
+      context: .
+      args:
+        gs_version: 9.26
+    volumes:
+      - "./ghostrule6.ps:/poc.ps:ro"
+    command: [ "gs", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
