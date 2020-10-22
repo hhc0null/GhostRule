@@ -1,0 +1,38 @@
+version: '3'
+services:
+
+  ghostrule1:
+    build:
+      context: .
+      args:
+        gs_version: 9.27
+    volumes:
+      - "./ghostrule1.ps:/poc.ps:ro"
+    command: [ "gs", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
+
+  ghostrule2:
+    build:
+      context: .
+      args:
+        gs_version: 9.27
+    volumes:
+      - "./ghostrule2.ps:/poc.ps:ro"
+    command: [ "gs", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
+
+  ghostrule3:
+    build:
+      context: .
+      args:
+        gs_version: 9.27
+    volumes:
+      - "./ghostrule3.ps:/poc.ps:ro"
+    command: [ "gs", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
+
+  ghostrule4:
+    build:
+      context: .
+      args:
+        gs_version: 9.27
+    volumes:
+      - "./ghostrule4.ps:/poc.ps:ro"
+    command: [ "gs", "-dSAFER", "-dNODISPLAY", "poc.ps" ]
