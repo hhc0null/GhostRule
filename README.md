@@ -7,25 +7,33 @@ This is a series of exploits that bypass SAFER mode of Ghostscript.
 The PoC codes shown below allow you to get command execution or file I/O at the privilege of the process even if Ghostscript is running on SAFER mode.  
 However, all of them bypass the protection by overwriting the security flags in systemdict therefore they have no longer effect against recent Ghostscript(>= 9.50) that have started employing the new SAFER implementation that prevents critical dictionaries from overwriting (refer to [commit 79a06b](https://git.ghostscript.com/?p=ghostpdl.git;a=commit;h=79a06b45e784e6839b2b2129cd2620ea606254e1)).
 
-### "Rule #1": Safer Mode Bypass by `.forceput` Exposure from `.pdf_hook_DSC_Creator` (CVE-2019-14811)
+### "Rule #1": A `.forceput` exposure from `.pdf_hook_DSC_Creator` (CVE-2019-14811)
 
-[GhostRule \#1](./ghostrule1.ps) was assigned [CVE-2019-14811](https://access.redhat.com/security/cve/cve-2019-14811).
+[CVE-2019-14811](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14811) is a `.forceput` exposure from `.pdf_hook_DSC_Creator` and '[ghostrule1.ps](./ghostrule1.ps)' is the exploit for it.
 
-### "Rule #2": Safer Mode Bypass by `.forceput` Exposure from `setuserparams` (CVE-2019-14812)
+[Credit](https://access.redhat.com/security/cve/cve-2019-14811): @hhc0null
 
-[GhostRule \#2](./ghostrule2.ps) was assigned [CVE-2019-14812](https://access.redhat.com/security/cve/cve-2019-14812).
+### "Rule #2": A `.forceput` exposure from `setuserparams` (CVE-2019-14812)
 
-### "Rule #3": Safer Mode Bypass by `.forceput` Exposure from `setsystemparams` (CVE-2019-14813)
+[CVE-2019-14812](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14812) is a `.forceput` exposure from `setuserparams` and '[ghostrule2.ps](./ghostrule2.ps)' is the exploit for it.
 
-[GhostRule \#3](./ghostrule3.ps) was assigned [CVE-2019-14813](https://access.redhat.com/security/cve/cve-2019-14813).
+[Credit](https://access.redhat.com/security/cve/cve-2019-14812): @hhc0null
 
-### "Rule #4": Safer Mode Bypass by `.forceput` Exposure from `.buildfont1` (CVE-2019-10216)
+### "Rule #3": A `.forceput` exposure from `setsystemparams` (CVE-2019-14813)
 
-[GhostRule \#4](./ghostrule4.ps) was assigned [CVE-2019-10216](https://access.redhat.com/security/cve/cve-2019-10216). ~~The credit was stolen...~~ :crying_cat_face:
+[CVE-2019-14813](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14813) is a `.forceput` exposure from `setsystemparams` and '[ghostrule3.ps](./ghostrule3.ps)' is the exploit for it.
 
-### "Rule #5": Safer Mode Bypass by `.forceput` Exposure from \*\*\*
+[Credit](https://access.redhat.com/security/cve/cve-2019-14813): @hhc0null
 
-A little more complex(?) case coming soon...?
+### "Rule #4": A `.forceput` exposure from `.buildfont1` (CVE-2019-10216)
+
+[CVE-2019-10216](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-10216) is a `.forceput` exposure from `buildfont1` and '[ghostrule4.ps](./ghostrule4.ps)' is the exploit for it.
+
+[Credit](https://access.redhat.com/security/cve/cve-2019-10216): Artifex Software and Netanel (Cloudinary) as the "original" reporter...???
+
+### "Rule #5": '???'
+
+I'm not so ethical thus I'm keeping the technique to grow its 'lifetime' <3
 
 ---
 
