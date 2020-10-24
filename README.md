@@ -1,12 +1,11 @@
 # GhostRule
 
-:ghost: A series of Safer Mode bypass exploits against Ghostscript. :ghost:
+This is a series of exploits that bypass SAFER mode of Ghostscript.
 
-[![DECO*27 - ゴーストルール feat. 初音ミク](http://img.youtube.com/vi/KushW6zvazM/0.jpg)](http://www.youtube.com/watch?v=KushW6zvazM)
+## Ghostscript <= 9.2x
 
-## GhostRule(s)
-
-These exploits allow an attacker to achieve OS command execution and file I/O however they've been already killed by [commit 79a06b](https://git.ghostscript.com/?p=ghostpdl.git;a=commit;h=79a06b45e784e6839b2b2129cd2620ea606254e1).
+The PoC codes shown below allow you to get command execution or file I/O at the privilege of the process even if Ghostscript is running on SAFER mode.  
+However, all of them bypass the protection by overwriting the security flags in systemdict therefore they have no longer effect against recent Ghostscript(>= 9.50) that have started employing the new SAFER implementation that prevents critical dictionaries from overwriting (refer to [commit 79a06b](https://git.ghostscript.com/?p=ghostpdl.git;a=commit;h=79a06b45e784e6839b2b2129cd2620ea606254e1)).
 
 ### "Rule #1": Safer Mode Bypass by `.forceput` Exposure from `.pdf_hook_DSC_Creator` (CVE-2019-14811)
 
@@ -27,3 +26,9 @@ These exploits allow an attacker to achieve OS command execution and file I/O ho
 ### "Rule #5": Safer Mode Bypass by `.forceput` Exposure from \*\*\*
 
 A little more complex(?) case coming soon...?
+
+---
+
+The name is from:
+
+[![DECO*27 - ゴーストルール feat. 初音ミク](http://img.youtube.com/vi/KushW6zvazM/0.jpg)](http://www.youtube.com/watch?v=KushW6zvazM)
